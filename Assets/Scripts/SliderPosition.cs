@@ -10,7 +10,7 @@ using Valve.VR.InteractionSystem;
 public class LoadSliderPosition : MonoBehaviour
 {
     public Slider slider;
-    public string jsonURL;
+    public string jsonAdress;
     public Jsonclass jsnData;
     void Start()
     {
@@ -19,8 +19,8 @@ public class LoadSliderPosition : MonoBehaviour
 
     IEnumerator getData()
     {
-        Debug.Log("Download...");
-        var uwr = new UnityWebRequest(jsonURL);
+        Debug.Log("Download");
+        var uwr = new UnityWebRequest(jsonAdress);
         uwr.method = UnityWebRequest.kHttpVerbGET;
         var resultFile = Path.Combine(Application.persistentDataPath, "result.json");
         var dh = new DownloadHandlerFile(resultFile);
@@ -31,7 +31,7 @@ public class LoadSliderPosition : MonoBehaviour
             Debug.Log("ERROR");
         else
         {
-            Debug.Log("Download saved to: " + resultFile);
+            Debug.Log("Saved to: " + resultFile);
             jsnData = JsonUtility.FromJson<Jsonclass>(File.ReadAllText(Application.persistentDataPath + "/result.json"));
             slider.value = jsnData.position;
             yield return StartCoroutine(getData());

@@ -2107,11 +2107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 946765662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eff51f5abe3f1f41bbd15f6c1d41e49, type: 3}
+  m_Script: {fileID: 11500000, guid: c1399a561975dc444a4960b5ff108feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 946765664}
-  jsonURL: https://drive.google.com/uc?export=download&id=1OS-klubTm-UGpbnrhM00EAmWjAWNJxSd
+  jsonAdress: https://drive.google.com/uc?export=download&id=1OS-klubTm-UGpbnrhM00EAmWjAWNJxSd
   jsnData:
     position: 0
 --- !u!1001 &1046372325
